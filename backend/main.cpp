@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include "httplib.h"
 #include "json.hpp"
 #include "sqlite3.h"
@@ -897,7 +898,9 @@ svr.Delete(R"(/api/admin/accounts/(.+))",
     std::cout << " Admin account: ADMIN / 9999\n";
     std::cout << "====================================\n";
 
-    svr.listen("0.0.0.0", 8080);
+    const char* portEnv = std::getenv("PORT");
+int port = portEnv ? std::stoi(portEnv) : 8080;
+svr.listen("0.0.0.0", port);
 
     sqlite3_close(db);
     return 0;
