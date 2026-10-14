@@ -1,0 +1,9 @@
+BANK ATM SIMULATION — RECOVERED PROJECT
+
+1. Read README.md first.
+2. Backend source: backend/main.cpp
+3. Website: frontend/index.html
+4. Admin demo login: ADMIN / 9999
+5. Normal user: create an account on the website.
+
+NOTE: The exact old ZIP was not found. This package includes the recovered C++ source plus a recreated frontend. Third-party C++ headers/libraries must be installed separately as described in README.md.
